@@ -1,0 +1,37 @@
+// ---------- Colors ---------- //
+$bg-grey: #fafafa
+$border-grey: #dfe1e2
+
+$green: #2aae51
+$red: #d6083b
+$blue: #36424a
+
+// ---------- Fonts ---------- //
+
+$montserrat: Montserrat, "Helvetica Neue", Helvetica, sans-serif
+
+
+// ---------- Helpers ---------- //
+
+$screen-lg: "screen and (min-width:85em)"
+
+// Rem Conversions
+// The UI is based on a 16px base, however this mixin allows us to let SASS calculate this for us on the fly. You can then instead more naturally enter the px/pt value instead of calculating REM manually (i.e. 32 automatically throws in 2rem).
+
+@function rem($size)
+  $rem-size: $size / 16
+  @return #{$rem-size}rem  
+=font-size($size)
+  font-size: $size + px
+  font-size: rem($size)
+  
+// Calc
+=calc($property, $expression)
+  #{$property}: -webkit-calc(#{$expression}) 
+  #{$property}: calc(#{$expression}) 
+
+// Tinting and shading allows easy and maintainable adjustments of a base color (e.g. highlighting a button on hover).
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)

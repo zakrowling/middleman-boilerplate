@@ -1,0 +1,21 @@
+%section#section-header
+  %h2 Header
+  %p Lorem ipsum dolor sit amet
+  %header.header
+    =link_to "#", title: "Website title", class: "logo" do
+      = image_tag "assets/images/link-to-logo.png", alt: "Website title"
+    %nav.header-nav
+      %ul
+        %li.nav-item
+          =link_to "#", title: "Menu Item" do
+            Menu Item
+        %li.nav-item
+          =link_to "#", title: "Menu Item" do
+            Menu Item
+    .header-title
+      %p
+        %span Lorem ipsum dolor sit amet
+    .header-cart
+      .cart-detail
+        %span.cart-title Total Amount
+        %span.cart-value $0.00

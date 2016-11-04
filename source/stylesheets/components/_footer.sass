@@ -1,0 +1,15 @@
+#section-header
+  display: block
+  background: $bg-grey
+  border: 1px solid $border-grey
+  overflow: hidden
+  +border-radius(0.25rem)
+  +box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.1))
+  +transition(background 0.1s ease-in-out, transform 2s ease-in-out, box-shadow 2s ease-in-out)
+  &:hover
+    background: #fff
+    +transform(translateY(-0.25rem))
+    +box-shadow(0 6px 7px 0 rgba(0, 0, 0, 0.05))
+  .header-nav
+    .content:before
+      content: "Main Menu"
