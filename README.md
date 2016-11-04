@@ -1,7 +1,7 @@
 # Middleman Boilerplate
-A boilerplate installation of Middleman to use HAML, SASS (SMACCS) and Ruby.
+A custom boilerplate installation of Middleman for new projects using HAML, SASS (SMACCS) and Ruby.
 
-##To run:
+## To run:
 bundle exec middleman
 
 ## To build/compile a new static version:
